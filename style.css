@@ -1,0 +1,277 @@
+body{
+/*background: #219dff;*/
+}                   
+#back{
+height:100px;
+width:100px;
+background-color:black;
+}
+
+.linkTab{
+	text-decoration: none !important;
+    color: black !important;
+}
+
+.linkTab:hover{
+	text-decoration: none !important;
+    color: blue !important;
+}
+
+/* --------------------------------------------------------------------tabs start*/
+.clear-no {
+  width: 100%;
+  overflow: visible;
+}
+.clear-no::after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+#tabs-row > ul {
+  padding: 0;
+  border: none;
+}
+.menu-clearfix {
+  /* support: IE7; */
+  min-height: 0;
+}
+ol, ul {
+  list-style: none;
+}
+.menu-clearfix:before, .menu-clearfix:after {
+  content: "";
+  display: table;
+  border-collapse: collapse;
+}
+
+.menu-clearfix:after {
+  clear: both;
+}
+.menu-clearfix:before, .menu-clearfix:after {
+  content: "";
+  display: table;
+  border-collapse: collapse;
+}
+#middle-content-left .tab:first-child {
+  margin-left: 6px;
+}
+								/* ------------------------------------------------------------------- 1024px -*/
+#tabs-row .tab-active {
+  border-bottom: 4px white solid;
+  background-color: white;
+  position: relative;
+  z-index: 1;
+}
+#middle-content-left .tab {
+  background-color: #f5f5f5;
+  display: block;
+  float: left;
+  position: relative;
+  top: 0;
+  text-align: center;
+  margin-right: 4px;
+}								/* -----------------------------------------------------------1024px ends---------*/
+
+ol, ul {
+  list-style: none;
+}
+
+
+#tabs-content {
+  border: 1px #ccc solid;
+  border-top: 4px solid #ccc;
+  -webkit-border-radius: 0 0 3px 3px;
+  -moz-border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px;
+  padding-top: 4px;
+  z-index: 1;
+  margin-top: -8px;
+}
+
+#tabs-content .infotab, #tabs-content .infotab-active {
+  padding: 16px;
+  padding-top: 0px;
+  display: none;
+  position: relative;
+  margin-top: 2px;
+}
+
+.clear-min {
+  overflow: hidden;
+}
+
+.clear-min::after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.back-to-top.fixed {
+  bottom: auto;
+  top: 0;
+  right: 105px;
+}
+.back-to-top {
+  position: absolute;
+  right: 105px;
+  top: 0;
+  z-index: 80000;
+  cursor: pointer;
+}
+
+
+
+/* --------------------------------------------------------------------tabs end*/
+
+                   /* browser          800px and more  */
+@media only screen and (min-width: 800px) {
+#content{
+margin:0 auto 0 auto;
+width: 1400px;
+min-height: 800px;
+background-image: url("img/lion.png");
+background-repeat: no-repeat;
+background-position: top left;
+
+}
+
+#leweoko{
+float:left;
+}
+#praweoko{
+float:right;
+}
+
+#topcont{
+height:110px;
+margin: 0px 0 0 110px;
+    background: -moz-linear-gradient(270deg, black, #219dff);
+    background: -webkit-linear-gradient(270deg, black, #219dff);
+    background: -o-linear-gradient(270deg, black, #219dff);
+    background: -ms-linear-gradient(270deg, black, #219dff);
+    background: linear-gradient(270deg, black, #219dff);
+text-align: right;
+
+}
+
+#topcont p{
+padding-top: 30px ;
+padding-right: 20px;
+font-size: 35px;
+color: #fff;
+}
+
+#midcont{
+width: 100%;
+min-height:700px;
+/*background: yellow; */
+}
+
+#foncontent{
+margin: 5px;
+padding-left:1px;
+min-height: 683px;
+background-image: url("img/fon1.jpg");
+}
+
+#foncontent p2{
+display:none;
+}
+
+#foncontent img{
+margin: 3px;
+}
+
+#prawe{
+
+margin:5px;
+min-height:200px;
+/*background-color:red; */
+}
+#wybor{
+float:left;
+height:100px;
+margin-left:100px;
+
+}
+
+}
+  #botcont{
+float: bottom;
+width: 100%;
+height:40px;
+background: green;
+}              
+               /*Tablet        550 - 800 px*/
+@media only screen and (max-width: 800px) and (min-width:550px) {
+#content{
+margin: 0 auto;
+width: 550px;
+min-height: 1200px;
+background-color: #fff;
+background-image: url("img/lion.jpg");
+background-repeat: no-repeat;
+background-position: top left;
+}
+#lewe img{
+width:100%;
+}
+
+
+
+}
+
+                        /* mobile        do 550px */
+@media only screen and (max-width: 550px) {
+#content{
+width: 480px;
+min-height: 1200px;
+background-color: #fff;
+background-image: url("img/lion.jpg");
+background-repeat: no-repeat;
+background-position: top left;
+}
+
+#topcont{
+height:110px;
+margin: 0px 0 0 110px;
+    background: -moz-linear-gradient(270deg, black, #219dff);
+    background: -webkit-linear-gradient(270deg, black, #219dff);
+    background: -o-linear-gradient(270deg, black, #219dff);
+    background: -ms-linear-gradient(270deg, black, #219dff);
+    background: linear-gradient(270deg, black, #219dff);
+text-align: center;
+}
+#topcont p{
+padding-top: 30px ;
+padding-right: 20px;
+font-size: 35px;
+color: #fff;
+}
+
+#lewe{
+margin-top: 10px;
+min-height:300px;
+background-color:black;
+text-align:center;
+}
+
+
+
+#lewe p2{
+font-size: 15px;
+color: #fff;
+}
+
+#lewe img{
+width:100%;
+}
+
+
+}
+

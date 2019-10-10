@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<head>
+<title>Praca dyplom</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="style_ev.css">
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-tab.js"></script>
+<script type="text/javascript" src="js/image.js"></script>
+<script type="text/javascript" src="d3.v3.min.js"></script> 
+<!-- zoom  -->
+<!--script type="text/javascript" src="js/ajaks.js"></script-->
+</head>
+<body>
+
+<div id="content">
+<div id="topcont"><p>Widzenie barwowe</p></div>
+
+<!--  start tabs-->
+<div id="kroki">
+<div id="tabs-row" class="clear-no">
+						<ul class="menu-clearfix" id="tabs-all" style="display: inline-flex;">
+	                    	<!-- first tab id must remain overview, only modify text -->
+							<li class="tab tab-active" id="krok0-tab"><a href="#krok0-Startowy">Poczatek</a></li>
+							<li class="tab" id="krok1-tab"><a href="">Siatkowka</a></li>
+							<li class="tab" id="krok2-tab"><a href="">Proekcja</a></li>
+							<li class="tab" id="krok3-tab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+							<li class="tab" id="krok3-tab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+							<li class="tab" id="krokp1-tab"><a href="">Siatka Preciki</a></li>
+							<li class="tab" id="krokp2-tab"><a href="">Proekcja</a></li>
+							<li class="tab" id="krok3-tab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+							<li class="tab" id="krok3-tab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+							<li class="tab"><a href="" class="linkTab" onClick="window.location.reload()">Reload</a>							
+						</ul>
+						<div id="tabs-content">
+							<!-- tab start ----------------------------------------------------------------------------------------                 KROK  0               -->
+							<div class="acc" id="krok0-acc">
+								<a href="#krok0">Krok 0</a>
+							</div>
+							<div id="krok0-content" class="infotab infotab clear-min active infotab-active">
+								<div class="tab-content mlb-pilot c00-pilot c00v0-pilot compact no-border">								
+														<div id="midcont">
+														<div id="foncontent">
+														<div id="leweoko"><!--img id="pictureinputlewe" src="obrazki/lewdziecko.jpg"-->	
+																<canvas id="canvaslewewybor" width="670" height="670"></canvas>
+														</div>
+														<div id="praweoko"><!--img id="pictureinputprawe" src="obrazki/prawdziecko.jpg"-->
+																<canvas id="canvasprawywybor" width="670" height="670"></canvas>
+														</div>
+														</div>
+														<div id="prawe">
+														<div id="wybor"><p>Lista obrazkow do wyboru:</p>
+														<form id='dlaleweoko'>
+															<input type="radio" value="obrazki/1.jpg" alt="canvaslewewybor" name="canvasprawywybor" onClick='okokrok(this.value,this.alt,this.name)' >Kwiaty
+															<input type="radio" value="obrazki/2.jpg" alt="canvaslewewybor" name="canvasprawywybor" onClick='okokrok(this.value,this.alt,this.name)' >Dziecko
+															<input type="radio" value="obrazki/3.jpg" alt="canvaslewewybor" name="canvasprawywybor" onClick='okokrok(this.value,this.alt,this.name)' >Chika
+															<input type="radio" value="obrazki/4.jpg" alt="canvaslewewybor" name="canvasprawywybor" onClick='okokrok(this.value,this.alt,this.name)' >Jezioro
+															<input type="radio" value="obrazki/5.jpg" alt="canvaslewewybor" name="canvasprawywybor" onClick='okokrok(this.value,this.alt,this.name)' >Girl
+															<input type="radio" value="obrazki/6.jpg" alt="canvaslewewybor" name="canvasprawywybor" onClick='okokrok(this.value,this.alt,this.name)' >Kot &nbsp; &nbsp; &nbsp; (sdandardowa odleglosc 170px, do zmiany w kolejnym kroku)
+														</form>
+														</div>
+														<!--div id="wybor">
+														<form id='dlapraweoko'><p>Lista obrazkow do wyboru poprawej stronie</p>
+														<input type="radio" name="pictureinputprawe" value="obrazki/praw.jpg" alt="praweoko" onClick='okokrok0(this.value,this.alt,this.name)' >Oko
+														<input type="radio" name="pictureinputprawe" value="obrazki/prawdziecko.jpg" alt="praweoko" onClick='okokrok0(this.value,this.alt,this.name)' CHECKED>Dziecko
+														<input type="radio" name="pictureinputprawe" value="obrazki/prawgreen.jpg" alt="praweoko" onClick='okokrok0(this.value,this.alt,this.name)' >Grewlin
+														</form>
+														</div-->
+														</div>
+														</div>	
+											<div id="bot"> 
+											&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+											 <div class="cta-tab" style="display: inline-block;"><a href="#krok1" onClick='krokproverka()'>Krok_Next</a></div>
+											</div>														
+								</div>
+							</div>
+							<!-- tab end krok 0-->
+														
+							<!-- tab start krok1  --------------------------------------------------------------------------------------                 KROK  1               -->
+							<div class="acc" id="krok1-acc">
+								<a href="#krok1">Krok 1</a>
+							</div>
+							<div id="krok1-content" class="infotab" style=" padding: 10px !important;">   
+								<div class="tab-content mlb-pilot c00-pilot c00v0-pilot compact no-border">
+											<div id="lewe">
+															
+																<div id="leweoko">
+																<canvas id="canvaslewy" width="670" height="670"></canvas>
+																</div>
+															
+																<div id="praweoko">
+																<canvas id="canvasprawy" width="670" height="670"></canvas>
+																</div>
+														</div>
+														<div id="prawe">
+															<br><br>
+															<label for=fader>Odleglosc miedzy srodkaki</label>
+																<input type=range min=10 max=330 value=170 id=fader step=5 onchange="outputUpdate(value)">
+																<output for=fader id=volume>170</output> px
+															 <!-- input type="button" Value="Zastosuj Zmiany" alt="canvaslewe" onclick='canvase()'/-->
+															 &nbsp;&nbsp;&nbsp;&nbsp;Pokazac srodek siatkowki: &nbsp;&nbsp;
+																<input type="radio" name="srodek" value="1" alt="leweoko" onClick='zmienvalue(this.value,this.alt)' >Tak
+																<input type="radio" name="srodek" value="0" alt="leweoko" onClick='zmienvalue(this.value,this.alt)' CHECKED >Nie
+															<input type="button" Value="Poka Srodek 1" alt="srodek1" name="canvaslewy" onclick='drawsrodek(this.alt, this.name)'/>
+															&nbsp;
+															<input type="button" Value="Ukry Srodek 1" alt="none1" name="canvaslewy" onclick='drawsrodek(this.alt, this.name)'/>
+															 &nbsp;
+															<input type="button" Value="Poka Srodek 2" alt="srodek2" name="canvasprawy" onclick='drawsrodek(this.alt, this.name)'/>
+															&nbsp;
+															<input type="button" Value="Ukry Srodek 2" alt="none2" name="canvasprawy" onclick='drawsrodek(this.alt, this.name)'/>
+															<br><br>
+															<hr>
+															<br><br>
+															<div id="ustaw1" style="width: 49%; display: inline-block;">
+															  Radius Green (px): <input type="text" Value="70" id="radiusgreen" class="poletext" style="width: 50px;">
+															  Procent G (% obrazka): <input type="text" Value="15" id="procentgreen" class="poletext" style="width: 50px;">
+															  Szerok kola(px):<input type="text" Value="40" id="szerokradiusgreen" class="poletext" style="width: 50px;"><br>
+															
+															  Radius Red (px): <input type="text" Value="90" id="radiusred" class="poletext" style="width: 50px;">
+															  Procent R (% obrazka): <input type="text" Value="20" id="procentred" class="poletext" style="width: 50px;"> 
+															  Szerok kola(px):<input type="text" Value="40" id="szerokradiusred" class="poletext" style="width: 50px;"><br>
+
+															  Radius Blue (px): <input type="text" Value="110" id="radiusblue" class="poletext" style="width: 50px;"> 
+															  Procent B (% obrazka): <input type="text" Value="11" id="procentblue" class="poletext" style="width: 50px;">
+															  Szerok kola(px):<input type="text" Value="40" id="szerokradiusblue" class="poletext" style="width: 50px;"><br>
+															<br>
+															<input type="radio" name="typoka" value="czlowiek" alt="leweoko" onClick='zmienvalue(this.value,this.alt)' >Człowiek
+															<input type="radio" name="typoka" value="kot" alt="leweoko" onClick='zmienvalue(this.value,this.alt)' >Kot
+															<input type="radio" name="typoka" value="ptak" alt="leweoko" onClick='zmienvalue(this.value,this.alt)' >Ptak
+															<input type="radio" name="typoka" value="test1" alt="leweoko" onClick='zmienvalue(this.value,this.alt)' >Rozmazane
+															<br><br>
+															<input type="button" Value="Drow Siatkowka 1 Kwadrat" alt="cansiatka1" onclick='drawsiat(this.alt)'/>&nbsp;&nbsp;
+															<input type="button" Value="Drow Siatkowka 1 Kolo" alt="cansiatka1" onclick='drawsiat(this.alt)'/>
+															<br><br><br>
+															<hr>
+															<input type="radio" name="kolortla" value="white" alt="siatka1" onClick='kolortla(this.value,this.alt)' CHECKED >Tlo biale
+															<input type="radio" name="kolortla" value="black" alt="siatka1" onClick='kolortla(this.value,this.alt)' >Tlo czarne
+															<input type="radio" name="kolortla" value="grey" alt="siatka1" onClick='kolortla(this.value,this.alt)' >Tlo szare
+															<br><br>
+															<br>
+															</div>
+															<div id="ustaw2" style="  width: 49%;    /* display: inline-block; */ float: right;">
+															  Radius Green (px): <input type="text" Value="70" id="radiusgreen2" class="poletext" style="width: 50px;">
+															  Procent G (% obrazka): <input type="text" Value="15" id="procentgreen2" class="poletext" style="width: 50px;">
+															  Szerok kola(px):<input type="text" Value="40" id="szerokradiusgreen2" class="poletext" style="width: 50px;"><br>
+															
+															  Radius Red (px): <input type="text" Value="90" id="radiusred2" class="poletext" style="width: 50px;">
+															  Procent R (% obrazka): <input type="text" Value="20" id="procentred2" class="poletext" style="width: 50px;"> 
+															  Szerok kola(px):<input type="text" Value="40" id="szerokradiusred2" class="poletext" style="width: 50px;"><br>
+
+															  Radius Blue (px): <input type="text" Value="110" id="radiusblue2" class="poletext" style="width: 50px;"> 
+															  Procent B (% obrazka): <input type="text" Value="11" id="procentblue2" class="poletext" style="width: 50px;">
+															  Szerok kola(px):<input type="text" Value="40" id="szerokradiusblue2" class="poletext" style="width: 50px;"><br>
+															<br>
+															<input type="radio" name="typoka" value="czlowiek" alt="praweoko" onClick='zmienvalue(this.value,this.alt)' >Człowiek
+															<input type="radio" name="typoka" value="kot" alt="praweoko" onClick='zmienvalue(this.value,this.alt)' >Kot
+															<input type="radio" name="typoka" value="ptak" alt="praweoko" onClick='zmienvalue(this.value,this.alt)' >Ptak
+															<input type="radio" name="typoka" value="test1" alt="praweoko" onClick='zmienvalue(this.value,this.alt)' >Rozmazane
+															<br><br>
+															<input type="button" Value="Drow Siatkowka 2 Kwadrat" alt="cansiatka3" onclick='drawsiat(this.alt)'/>&nbsp;&nbsp;
+															<input type="button" Value="Drow Siatkowka 2" alt="cansiatka3" onclick='drawsiat(this.alt)'/>
+															<br><br><br>
+															<hr>
+															<input type="radio" name="kolortla2" value="white" alt="siatka2" onClick='kolortla(this.value,this.alt)' CHECKED >Tlo biale
+															<input type="radio" name="kolortla2" value="black" alt="siatka2" onClick='kolortla(this.value,this.alt)' >Tlo czarne
+															<input type="radio" name="kolortla2" value="grey" alt="siatka2" onClick='kolortla(this.value,this.alt)' >Tlo szare
+															<br><br>
+															<br>
+															</div>
+													
+															<div id="siatka1" style="width: 50%;     position: relative; float: left;">
+																<canvas id="cansiatka1" width="670" height="670"></canvas>
+																<canvas id="cansiatka2" width="670" height="670"></canvas>
+															</div>
+
+															<div id="siatka2" style="width: 50%;     position: relative; float: right;">
+																<canvas id="cansiatka3" width="670" height="670"></canvas>
+																<canvas id="cansiatka4" width="670" height="670"></canvas>
+															</div>
+															
+															
+															<br><br>
+															<canvas id="cansiatka1zoom" width="670" height="670"></canvas>
+															<canvas id="cansiatka2zoom" width="670" height="670"></canvas>
+														</div> 
+											<div id="botcont"> 
+											<br>&nbsp; 
+											<div class="cta-tab" style="display: inline-block;"><a href="#krok0" class="linkTab"><-Krok_Back</a></div>
+											<div class="cta-tab" style="display: inline-block;"><a href="#krok2" class="linkTab">Krok_Next-></a></div>
+											</div>
+								</div>
+							</div>
+							<!-- tab end -->
+							<!-- tab start krok 2-->
+							<div class="acc" id="krok2-acc">
+								<a href="#krok2">Krok 2</a>
+							</div>
+							<div id="krok2-content" class="infotab">
+								<div class="tab-content mlb-pilot c00-pilot c00v0-pilot compact no-border">								
+														
+											Proekcja kontent	
+											<div id="botcont"> 
+											<br>&nbsp; 
+											 <div class="cta-tab" style="display: inline-block;"><a href="#krok1" class="linkTab"><-Krok_Back</a></div>
+											</div>												
+								</div>
+							</div>
+							
+							<!-- tab end krok 2-->
+							
+							
+							
+						</div>
+</div>
+</div>
+<!-- end tabs-->
+
+
+<div id="botcont"> 
+<br>
+&nbsp; <div class="cta-tab" style="display: inline-block;"><a href="" class="linkTab" onClick="window.location.reload()">Reload</a></div> 
+
+
+</div>
+<script type="text/javascript" src="js/zoom.js"></script>
+	                       
+
+
+
+</div>
+</body>

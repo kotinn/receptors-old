@@ -1,0 +1,24 @@
+nav {
+  height: 100px;
+}
+.main {
+  margin: 0 auto 0 auto;
+  max-width: 1400px;
+  width: 1400px;
+}
+.bar {
+  padding: 10px;
+}
+.leweoko {
+  width: 700px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 800px) {
+  .main {
+    width: 1400px;
+    min-height: 800px;
+    background-image: url(img/lion.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+}
